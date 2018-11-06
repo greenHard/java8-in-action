@@ -6,7 +6,11 @@ package com.zhang.specific.java8;
 public class Apple {
 
     private String color;
+
     private long weight;
+
+    private String name;
+
 
     public Apple() {
     }
@@ -14,6 +18,20 @@ public class Apple {
     public Apple(String color, long weight) {
         this.color = color;
         this.weight = weight;
+    }
+
+    public Apple(String color, long weight, String name) {
+        this.color = color;
+        this.weight = weight;
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getColor() {
@@ -37,6 +55,7 @@ public class Apple {
         return "Apple{" +
                 "color='" + color + '\'' +
                 ", weight=" + weight +
+                ", name='" + name + '\'' +
                 '}';
     }
 }

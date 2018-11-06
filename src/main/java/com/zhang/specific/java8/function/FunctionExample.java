@@ -13,15 +13,23 @@ import java.util.function.Function;
 public class FunctionExample {
     public static void main(String[] args) {
         // apply()
-        Function<String, String> function = s -> s.toLowerCase();
-        String apply = function.apply("Java 8");
-        System.out.println("apply : " + apply);
+        Function<Integer, Integer> function = s -> s * s;
+        Integer result = function.apply(2);
+        System.out.println("apply : " + result);
+
+
+        // compose()
+        Function<Integer, Integer> compose = function.compose(s -> s * 3);
+        System.out.println("compose: " + compose.apply(2));
+
 
         //andThen()
-        Function<String, String> andThenFunction = function.andThen(s -> s.toUpperCase());
-        String name = andThenFunction.apply("zhang");
-        System.out.println("andThen: "+ name);
+        Function<Integer, Integer> andThen = function.andThen(s -> s * 3);
+        System.out.println("andThen: " + andThen.apply(2));
 
-
+        // identity()
+        
     }
 }
+
+
