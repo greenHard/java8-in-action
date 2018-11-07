@@ -41,7 +41,6 @@ public class FilterApple {
         List<Apple> apples1 = findApples(list, new RedAnd110WeightFilter());
         System.out.println("红色并且大于110的苹果: " + apples1);
 
-
         // 匿名内部类的方式,行为参数化
         List<Apple> yellowList = findApples(list, new AppleFilter() {
             @Override
@@ -64,7 +63,7 @@ public class FilterApple {
         System.out.println("使用通用过滤方法过滤的结果" + appFilters);
 
         List<Integer> numbers = IntStream.range(0, 100).boxed().collect(Collectors.toList());
-        List<Integer> resultNumbers = filter(numbers, i -> i % 10 == 0);
+        List<Integer> resultNumbers = filter(numbers,  i -> i % 10 == 0);
         System.out.println("过滤之后的集合为: " +resultNumbers);
 
 

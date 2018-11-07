@@ -34,7 +34,7 @@ public class Java7NewSpecific {
         }
 
         // 2. 数值可加下划线(1_000_000)
-        int money = 1_000_000_000;
+        int money = 1_000_000_00_0;
         out.println(money);
 
         // 3. 二进制字面量
@@ -69,7 +69,7 @@ public class Java7NewSpecific {
         // 6. Try-with-resource
         // java.lang.AutoCloseable
         fileCopy(new File("source.txt"), new File("target.txt"));
-        // java的自动关闭有一个问题  TODO
+        // java的自动关闭有一个问题
 
         // 7. fork-join
         // 思想: 大任务分解成小任务，然后小任务又可以继续分解，然后每个小任务分别计算出结果再合并起来，最后将汇总的结果作为大任务结果
@@ -86,7 +86,7 @@ public class Java7NewSpecific {
      * @param source 源文件
      * @param target 目标文件
      */
-    private static void fileCopy(File source, File target){
+    private static void fileCopy(File source, File target) {
         try (FileInputStream fileInput = new FileInputStream(source);
              FileOutputStream fileOutput = new FileOutputStream(target);){
             byte[] b = new byte[1024];

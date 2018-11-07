@@ -14,7 +14,7 @@ public class MyForkJoinTask extends RecursiveTask<Long> {
     private Long end;
 
     // 临界值
-    public static final Long THRESHOLD = 1_000_00L;
+    public static final Long THRESHOLD = 1_000_000_0L;
 
     public MyForkJoinTask(Long start, Long end) {
         this.start = start;
