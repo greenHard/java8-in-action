@@ -80,6 +80,7 @@ public class StreamStartExample {
                 .sorted(comparing(Dish::getCalories))
                 .map(Dish::getName)
                 .collect(toList());
+
         // 并行流
         List<String> parallelStreamCollect = menu.parallelStream()
                 .filter(d -> d.getCalories() < 400)

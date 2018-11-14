@@ -121,7 +121,7 @@ public class FilterApple {
          *      4. lambda 表达式内所抛出的异常和 T 的方法 throws 类型相兼容
          *
          *
-         * 目标类型的山下文?
+         * 目标类型的上下文?
          * 显示类型、隐式类型
          * 如果 lambda 表达式具有 显式类型（参数类型被显式指定），编译器就可以直接 使用lambda 表达式的返回类型；
          * 如果lambda表达式具有 隐式类型（参数类型被推导而知），重载解析则会忽略 lambda 表达式函数体而只依赖 lambda 表达式参数的数量
@@ -158,6 +158,22 @@ public class FilterApple {
          *
          *
          */
+
+
+
+        int a = 10;
+
+        //Thread thread2 = new Thread(new Runnable() {
+        //    @Override
+        //    public void run() {
+        //        System.out.println(a);
+        //    }
+        //});
+
+        Thread thread1 = new Thread(() ->{
+            System.out.println(a);
+
+        });
 
 
 

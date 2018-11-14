@@ -26,7 +26,7 @@ public class PredicateExample {
         System.out.println("and :" + andPredicate.test(102));
         System.out.println("and :" + andPredicate.test(101));
         System.out.println("========================");
-
+        //
         // or()
         Predicate<Integer> orPredicate = predicate.or(x -> x % 2 == 0);
         System.out.println("or :" + orPredicate.test(8));

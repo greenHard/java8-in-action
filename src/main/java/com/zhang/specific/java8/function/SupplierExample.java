@@ -1,5 +1,7 @@
 package com.zhang.specific.java8.function;
 
+import com.zhang.specific.java8.Apple;
+
 import java.util.function.Supplier;
 
 /**
@@ -12,7 +14,17 @@ import java.util.function.Supplier;
 public class SupplierExample {
     public static void main(String[] args) {
         // get()
-        Supplier<StringBuilder> supplier = StringBuilder::new;
+
+        Supplier<Apple> supplier1 = new Supplier<Apple>() {
+            @Override
+            public Apple get() {
+                return new Apple();
+            }
+        };
+        System.out.println(supplier1.get().getClass());
+
+
+        Supplier<Apple> supplier = () -> new Apple();
         System.out.println(supplier.get().getClass());
 
         // BooleanSupplier, IntSupplier, LongSupplier, DoubleSupplier
