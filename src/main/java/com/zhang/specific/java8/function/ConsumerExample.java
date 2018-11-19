@@ -12,6 +12,7 @@ import java.util.function.Consumer;
 public class ConsumerExample {
     public static void main(String[] args) {
         // accept()
+        //Runnable runnable = () -> System.out.println("1111");
         Consumer<Long> consumer = x -> System.out.println(x + 2);
         consumer.accept(7L);
         System.out.println("==============");
